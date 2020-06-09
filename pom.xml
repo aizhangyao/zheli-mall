@@ -15,6 +15,7 @@
         <module>zheli-order</module>
         <module>zheli-product</module>
         <module>zheli-ware</module>
+        <module>renren-fast</module>
     </modules>
 
 </project>
