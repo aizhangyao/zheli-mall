@@ -17,6 +17,7 @@
         <module>zheli-ware</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
+        <module>zheli-common</module>
     </modules>
 
 </project>
