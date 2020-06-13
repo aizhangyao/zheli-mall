@@ -3,6 +3,7 @@ package com.aiz.zhelimall.order;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 一.整合Mybatis-Plus
@@ -21,6 +22,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *          (2).高速MyBatis-Plus，sql映射文件位置
  *
  */
+@EnableDiscoveryClient
 @MapperScan("com.aiz.zhelimall.order.dao")
 @SpringBootApplication
 public class ZheliOrderApplication {
