@@ -5,9 +5,8 @@ spring:
         - id: test_route
           uri: https://www.baidu.com
           predicates:
-            - Query:url,baidu
-
+            - Query=url,baidu
         - id: qq_route
-            uri: https://www.qq.com
-            predicates:
-              - Query:url,qq
+          uri: https://www.qq.com
+          predicates:
+            - Query=url,qq
