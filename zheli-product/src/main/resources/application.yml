@@ -6,7 +6,7 @@
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
-#      discovery:
+#      discovery:discovery
 #        server-addr: 119.23.25.235:8848
 #        namespace: 19eaad6f-ef24-423c-a599-19aec7052b25
 #  application:
@@ -16,5 +16,10 @@
 #  global-config:
 #    db-config:
 #      id-type: auto
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
 #server:
 #  port: 8000
+#logging:
+#  level:
+#    com.aiz.zhelimall: debug
