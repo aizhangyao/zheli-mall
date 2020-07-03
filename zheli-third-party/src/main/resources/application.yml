@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 119.23.25.235:8848
+    alicloud:
+      access-key: LTAI4GAGUKKkE4agDJM38Rok
+      secret-key: ggruUCv4r9juD8QkmB68C4RKiwYVD6
+      oss:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+        bucket: zheli-mall
+  application:
+    name: zheli-third-party
+server:
+  port: 30000

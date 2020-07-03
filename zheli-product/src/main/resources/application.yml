@@ -6,9 +6,14 @@
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
-#      discovery:discovery
+#      discovery:
 #        server-addr: 119.23.25.235:8848
 #        namespace: 19eaad6f-ef24-423c-a599-19aec7052b25
+#    alicloud:
+#      access-key: LTAI4GAGUKKkE4agDJM38Rok
+#      secret-key: ggruUCv4r9juD8QkmB68C4RKiwYVD6
+#      oss:
+#        endpoint: oss-cn-shanghai.aliyuncs.com
 #  application:
 #    name: zheli-product
 #mybatis-plus:

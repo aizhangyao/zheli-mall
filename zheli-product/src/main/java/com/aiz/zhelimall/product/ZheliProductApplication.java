@@ -23,7 +23,15 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *  (一).配置全局的逻辑删除规则 (省略)
  *  (二).配置逻辑删除的组件Bean (高版本可以省略)
  *  (三).给Bean加上逻辑删除注解@TableLogic
- *  (四).
+ *
+ * 三.JSR303
+ *  (一).给Bean添加校验注解 @Email @NotNull在javax.validation.constraints包下
+ *      @NotBlank
+ *      private String name;
+ *  (二).开启校验功能@Valid
+ *      public R save(@Valid @RequestBody BrandEntity brand)
+ *      效果：校验错误以后会有默认的响应；
+ *  (三).给校验的Bean后紧跟一个BindingResult,就可以获取到校验的结果
  */
 @EnableDiscoveryClient
 @SpringBootApplication
