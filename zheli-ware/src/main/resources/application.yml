@@ -7,7 +7,7 @@
 #  cloud:
 #    nacos:
 #      discovery:
-#        server-addr: 119.23.25.235:8848
+#        server-addr: 127.0.0.1:8848
 #        namespace: 7e16498c-5eac-4c38-a90a-abdd5b81d5d1
 #  application:
 #    name: zheli-ware

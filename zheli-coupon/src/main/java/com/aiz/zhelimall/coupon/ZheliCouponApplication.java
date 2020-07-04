@@ -13,7 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *   </dependency>
  * 2.创建一个bootstrap.properties
  *  spring.application.name=zheli-coupon
- *  spring.cloud.nacos.config.server-addr=119.23.25.235:8848
+ *  spring.cloud.nacos.config.server-addr=127.0.0.1:8848
  * 3.需要给配置中心默认添加一个叫 数据集(Data ID) zheli-coupon.properties。默认规则：应用名.properties。
  * 4.给 应用名.properties添加任何配置
  * 5.动态获取配置

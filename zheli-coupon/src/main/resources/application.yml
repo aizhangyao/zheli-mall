@@ -7,7 +7,7 @@
 #  cloud:
 #    nacos:
 #      discovery:
-#        server-addr: 119.23.25.235:8848
+#        server-addr: 127.0.0.1:8848
 #        # namespace: 891e5b27-e368-4aad-8984-d51e5d88835a
 #  application:
 #    name: zheli-coupon

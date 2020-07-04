@@ -7,7 +7,7 @@
 #  cloud:
 #    nacos:
 #      discovery:
-#        server-addr: 119.23.25.235:8848
+#        server-addr: 127.0.0.1:8848
 #        namespace: 19eaad6f-ef24-423c-a599-19aec7052b25
 #    alicloud:
 #      access-key: LTAI4GAGUKKkE4agDJM38Rok
