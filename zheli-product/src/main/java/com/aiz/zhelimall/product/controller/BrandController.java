@@ -63,6 +63,7 @@ public class BrandController {
     @RequestMapping("/save")
     //@RequiresPermissions("product:brand:save")
     public R save(@Valid @RequestBody BrandEntity brand, BindingResult result){
+        System.out.println(".....");
         if(result.hasErrors()){
             Map<String,String> map = new HashMap<>();
             //1.获取校验的错误结果
