@@ -1,9 +1,11 @@
 package com.aiz.zhelimall.product.service;
 
+import com.aiz.zhelimall.product.vo.AttrGroupRelationVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.aiz.common.utils.PageUtils;
 import com.aiz.zhelimall.product.entity.AttrAttrgroupRelationEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +18,7 @@ import java.util.Map;
 public interface AttrAttrgroupRelationService extends IService<AttrAttrgroupRelationEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void saveBatch(List<AttrGroupRelationVo> vos);
 }
 

@@ -1,9 +1,11 @@
 package com.aiz.zhelimall.product.service;
 
+import com.aiz.zhelimall.product.entity.BrandEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.aiz.common.utils.PageUtils;
 import com.aiz.zhelimall.product.entity.CategoryBrandRelationEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,5 +24,7 @@ public interface CategoryBrandRelationService extends IService<CategoryBrandRela
     void updateBrand(Long brandId, String name);
 
     void updateCategory(Long catId, String name);
+
+    List<BrandEntity> getBrandsByCatId(Long catId);
 }
 

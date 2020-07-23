@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @ClassName MyBatisConfig
- * @Description TODO
+ * @Description
  * @Author Zhang Yao
  * @Date Create in 15:21 2020/7/6 0006
  * @Version 1.0

@@ -3,6 +3,7 @@ package com.aiz.zhelimall.product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 一.整合Mybatis-Plus
@@ -51,6 +52,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *  (二).编写一个自定义的校验器 ConstraintValidator
  *  (三).关联自定义的校验器和自定义的校验注解
  */
+@EnableFeignClients(basePackages = "com.aiz.zhelimall.product.feign")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ZheliProductApplication {

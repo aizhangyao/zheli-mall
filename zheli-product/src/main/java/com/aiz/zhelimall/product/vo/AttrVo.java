@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @ClassName AttrVo
- * @Description TODO
+ * @Description
  * @Author ZhangYao
  * @Date Create in 10:35 2020/7/7 0007
  * @Version 1.0
