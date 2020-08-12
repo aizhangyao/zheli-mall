@@ -8,13 +8,11 @@ import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
-import org.elasticsearch.search.aggregations.Aggregation;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -27,7 +25,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
-import java.util.Map;
 
 @SpringBootTest
 class ZheliSearchApplicationTests {
@@ -36,6 +33,46 @@ class ZheliSearchApplicationTests {
     private RestHighLevelClient client;
 
 
+    /**
+     * (1).方便检索
+     * {
+     *     skuId:1
+     *     spkId:11
+     *     skuTitle:
+     *     saleCount:
+     *     attrs:[
+     *          {尺寸：6寸},
+     *          {CPU：高通945},
+     *          {分辨率：全高清}
+     *     ]
+     * }
+     * 冗余：
+     *  100万*20=100000*2KB=2000MB=2G
+     *
+     * (2).
+     * sku索引{
+     *      skuId:1
+     *      spkId:11
+     *      xxxxx
+     * }
+     *
+     * attr索引{
+     *     spuId:11,
+     *     attrs:[
+     *          {尺寸：6寸},
+     *          {CPU：高通945},
+     *          {分辨率：全高清}
+     *     ]
+     * }
+     *
+     * 搜索 小米：粮食、手机、电器
+     * 10000个，4000个spu
+     * 分步骤，4000个spu对应的所有可能属性；
+     * esClient：spuId:[4000个spuId] 4000*8=32000byte=32KB 一个请求
+     * 一万人同时访问 32KB*10000人=320MB 如果百万人 32GB
+     *
+     *
+     */
     /**
      * 测试复杂检索
      */

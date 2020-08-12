@@ -29,7 +29,8 @@ public class ZheliElasticSearchConfig {
     public RestHighLevelClient esRestClient() {
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("119.23.25.235", 9200, "http")));
+                        //new HttpHost("119.23.25.235", 9200, "http")));
+                        new HttpHost("127.0.0.1", 9200, "http")));
         return client;
     }
 }
