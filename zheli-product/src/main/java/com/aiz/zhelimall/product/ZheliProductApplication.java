@@ -39,11 +39,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  *      2.@Validated(AddGroup.class)
  *      3.默认没有指定分组的校验注解@Notblank,在分组校验情况@Validated(AddGroup.class)下不生效,只会在@Validated生效
  *
- *  四.统一异常处理
+ * 四.统一异常处理
  *  (一).编写异常处理类，使用@ControllerAdvice
  *  (二).使用ExceptionHandler标注方法可以处理的异常
  *
- *  五.自定义校验
+ * 五.自定义校验
  *  (一).编写一个自定义的校验注解
  *     @Documented
      * @Constraint(validatedBy = {ListValueConstraintValidator.class}【可以指定多个不同的校验器，适配不同类型的校验】)
@@ -51,6 +51,16 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
      * @Retention(RetentionPolicy.RUNTIME)
  *  (二).编写一个自定义的校验器 ConstraintValidator
  *  (三).关联自定义的校验器和自定义的校验注解
+ *
+ * 六、模板引擎
+ *  (一).thymeleaf-starter：关闭缓存
+ *  (二).静态资源都放在static文件下就可以按照路径直接访问
+ *  (三).页面都放在templates下，直接访问
+ *      SpringBoot 访问项目的时候，默认会找index
+ *  (四).页面修改不重启服务器实时更新
+ *      (1).引入dev-tools
+ *      (2).修改完页面使用Ctrl+Shift+F9重新自动编译，如果是代码配置还是推荐重启项目。
+ *  可以参考WebMvcAutoConfiguration.welcomePageHandlerMapping()这个方法看。就可以理解为什么访问`localhost:8000`会转到`resources/templates/index.html`
  */
 @EnableFeignClients(basePackages = "com.aiz.zhelimall.product.feign")
 @EnableDiscoveryClient
