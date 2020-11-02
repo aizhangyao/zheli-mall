@@ -1,5 +1,6 @@
 package com.aiz.zhelimall.product.service;
 
+import com.aiz.zhelimall.product.vo.Catalog2Vo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.aiz.common.utils.PageUtils;
 import com.aiz.zhelimall.product.entity.CategoryEntity;
@@ -33,5 +34,8 @@ public interface CategoryService extends IService<CategoryEntity> {
     void updateCascade(CategoryEntity category);
 
     List<CategoryEntity> getLeve1Categorys();
+
+    Map<String, List<Catalog2Vo>> getCatalogJson();
+
 }
 

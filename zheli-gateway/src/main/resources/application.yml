@@ -15,7 +15,7 @@ spring:
         - id: product_route
           uri: lb://zheli-product
           predicates:
-            - Path=/api/product/**
+            - Path=/api/product/**,/hello
           filters:
             - RewritePath=/api/(?<segment>.*),/$\{segment}
 
@@ -53,6 +53,16 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+        - id: zhelimall_host_route
+          uri: lb://zheli-product
+          predicates:
+            - Host=zhelimall.com
+
+        - id: zhelimall_host_route
+          uri: lb://zheli-search
+          predicates:
+            - Host=search.zhelimall.com
 
 ## lb:负载均衡 load balancing
 ## 前端項目, /api

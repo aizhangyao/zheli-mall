@@ -2,7 +2,7 @@
 #  datasource:
 #    username: root
 #    password: root
-#    url: jdbc:mysql://119.23.25.235:3306/zhelimall_pms
+#    url: jdbc:mysql://127.0.0.1:3306/zhelimall_pms
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
@@ -20,6 +20,11 @@
 #      date-format: yyyy-MM-dd HH:mm:ss
 #  thymeleaf:
 #    cache: false
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password: redis
+#
 #mybatis-plus:
 #  mapper-locations: classpath:/mapper/**/*.xml
 #  global-config:
