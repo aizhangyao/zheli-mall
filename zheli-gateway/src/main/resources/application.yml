@@ -59,7 +59,7 @@ spring:
           predicates:
             - Host=zhelimall.com
 
-        - id: zhelimall_host_route
+        - id: zhelimall_search_route
           uri: lb://zheli-search
           predicates:
             - Host=search.zhelimall.com
